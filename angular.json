@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ng-byte-bank"
+    }
+  },
+  "defaultProject": "ng-byte-bank",
+  "cli": {
+    "analytics": false
+  }
 }
