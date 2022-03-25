@@ -15,5 +15,11 @@ export class NewTransferComponent {
 
     const emitValue = { value: this.value, destiny: this.destiny };
     this.toTransfer.emit(emitValue);
+    this.clearFileds();
+  }
+
+  clearFileds() {
+    this.value = 0;
+    this.destiny = 0;
   }
 }
