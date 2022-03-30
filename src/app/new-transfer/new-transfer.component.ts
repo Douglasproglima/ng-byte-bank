@@ -8,7 +8,7 @@ export class NewTransferComponent {
   @Output() toTransfer = new EventEmitter<any>();
 
   value: number = 0;
-  destiny: number;
+  destiny: string = "0000-0";
 
   transfer() {
     console.log(`Valor: ${this.value} destino: ${this.destiny}`);
@@ -20,6 +20,6 @@ export class NewTransferComponent {
 
   clearFileds() {
     this.value = 0;
-    this.destiny = 0;
+    this.destiny = "0000-0";
   }
 }

@@ -1,0 +1,16 @@
+<table class="darkTable">
+  <thead>
+    <tr>
+      <th class="tg-c3ow">Data</th>
+      <th class="tg-0lax">Valor</th>
+      <th class="tg-0lax">Destino</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let transfer of getTransfers">
+      <td class="tg-0lax">{{ transfer?.date | date : 'shortDate' : '' : 'pt-BR' }}</td>
+      <td class="tg-0lax">{{ transfer?.value | currency: 'BRL': 'symbol':'0.2':'pt' }}</td>
+      <td class="tg-0lax">{{ transfer?.destiny }}</td>
+    </tr>
+  </tbody>
+  </table>

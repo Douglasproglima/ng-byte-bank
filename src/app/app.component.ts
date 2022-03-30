@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng-byte-bank';
-  _transfer: any;
+  transfers: Array<any> = [];
 
   transfer($event) {
-    console.log($event);
-    this._transfer = $event;
+    const transfer = {...$event, date: new Date()}
+    this.transfers.push(transfer);
   };
 }
