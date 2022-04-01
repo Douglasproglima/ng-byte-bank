@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { TransferService } from './../services/transfer.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-list-statement',
@@ -6,9 +7,11 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./list-statement.component.scss']
 })
 export class ListStatementComponent implements OnInit {
-  @Input() getTransfers: Array<any> = [];
+  toTransfers: any[] = [];
 
-  constructor() {}
+  constructor(private service: TransferService) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.toTransfers = this.service.transfers;
+  }
 }

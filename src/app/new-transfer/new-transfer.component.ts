@@ -11,8 +11,6 @@ export class NewTransferComponent {
   destiny: string = "0000-0";
 
   transfer() {
-    console.log(`Valor: ${this.value} destino: ${this.destiny}`);
-
     const emitValue = { value: this.value, destiny: this.destiny };
     this.toTransfer.emit(emitValue);
     this.clearFileds();

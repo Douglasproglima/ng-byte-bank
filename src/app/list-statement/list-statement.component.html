@@ -1,13 +1,14 @@
+<h2>Extrato de Transferências</h2>
 <table class="darkTable">
-  <thead *ngIf="getTransfers?.length > 0;">
+  <thead *ngIf="toTransfers?.length > 0;">
     <tr>
       <th class="tg-c3ow">Data</th>
       <th class="tg-0lax">Valor</th>
       <th class="tg-0lax">Destino</th>
     </tr>
   </thead>
-  <tbody *ngIf="getTransfers?.length > 0; else listEmpty">
-    <tr *ngFor="let transfer of getTransfers">
+  <tbody *ngIf="toTransfers?.length > 0;">
+    <tr *ngFor="let transfer of toTransfers">
       <td class="tg-0lax">
         {{ transfer?.date | date: "shortDate":"":"pt-BR" }}
       </td>

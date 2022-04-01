@@ -4,6 +4,7 @@
   border-radius: 4px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   &__titulo {
+    text-align: center;
     text-transform: capitalize;
     color: var(--primary);
   }
