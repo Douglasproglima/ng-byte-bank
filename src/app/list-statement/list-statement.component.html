@@ -1,16 +1,23 @@
 <table class="darkTable">
-  <thead>
+  <thead *ngIf="getTransfers?.length > 0;">
     <tr>
       <th class="tg-c3ow">Data</th>
       <th class="tg-0lax">Valor</th>
       <th class="tg-0lax">Destino</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody *ngIf="getTransfers?.length > 0; else listEmpty">
     <tr *ngFor="let transfer of getTransfers">
-      <td class="tg-0lax">{{ transfer?.date | date : 'shortDate' : '' : 'pt-BR' }}</td>
-      <td class="tg-0lax">{{ transfer?.value | currency: 'BRL': 'symbol':'0.2':'pt' }}</td>
+      <td class="tg-0lax">
+        {{ transfer?.date | date: "shortDate":"":"pt-BR" }}
+      </td>
+      <td class="tg-0lax">
+        {{ transfer?.value | currency: "BRL":"symbol":"0.2":"pt" }}
+      </td>
       <td class="tg-0lax">{{ transfer?.destiny }}</td>
     </tr>
   </tbody>
-  </table>
+</table>
+<ng-template #listEmpty>
+  <p>Nenhuma transação realizada.</p>
+</ng-template>
